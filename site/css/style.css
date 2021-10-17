@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-dark: hsl(233, 26%, 24%);
+    --primary-green: hsl(136, 65%, 51%);
+    --primary-bright: hsl(192, 70%, 51%);
+    --neutral-grayish: hsl(233, 8%, 62%);
+    --neutral-blue: hsl(220, 16%, 96%);
+    --neutral-gray: hsl(0, 0%, 98%);
+    --neutral-white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--neutral-blue);
+}
+
+p {
+    color: var(--neutral-grayish);
+    font-size: 18px;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 400;
+}
+
+
+/******navbar*************/
+
+#navbar-header {
+    background-color: var(--neutral-white);
+    z-index: 2;
+    text-align: center;
+    width: 100vw;
+}
+
+
+/**center the menu****/
+
+ul.navbar-nav.me-auto.mb-2.mb-md-0 {
+    margin: auto;
+}
+
+
+/**change the color of the menu**/
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--neutral-grayish);
+    font-size: 16px;
+}
+
+button.btn {
+    background: linear-gradient(to right, var(--primary-green), var(--primary-bright));
+    border-radius: 30px;
+}
+
+
+/******End navbar*************/
+
+
+/**descrition***/
+
+.description {
+    background-color: var(--neutral-gray);
+    width: 100%;
+    height: 580px;
+}
+
+.image {
+    position: relative;
+}
+
+.image img.background {
+    position: absolute;
+    width: 1000px;
+    height: 790px;
+    top: -150px;
+    right: -211px;
+}
+
+.phone {
+    position: relative;
+    z-index: 1;
+}
+
+.phone img {
+    position: absolute;
+    width: 684px;
+    height: auto;
+    top: -108px;
+    right: -115px;
+}
+
+.info {
+    width: 350px;
+    padding-top: 100px;
+}
+
+
+/**why choose us**/
+
+#chooseUs {
+    background-color: var(--neutral-blue);
+    padding-top: 35px;
+    padding-bottom: 80px;
+}
+
+#chooseUs h3 {
+    color: var(--primary-dark);
+    font-size: 1.8em;
+    margin-bottom: .5em;
+}
+
+#chooseUs p {
+    color: var(--neutral-grayish);
+    margin: 0;
+    font-size: 16px;
+}
+
+.whyContent {
+    margin: 60px 0;
+}
+
+#chooseUs h4 {
+    margin: .6em 0;
+}
+
+.colom {
+    margin-bottom: 30px;
+}
+
+
+/***article****/
+
+#article {
+    background-color: var(--neutral-gray);
+    padding: 70px 0;
+}
+
+#article h2 {
+    padding-bottom: 20px;
+    font-size: 2.3em;
+}
+
+.card-subtitle {
+    color: var(--neutral-grayish);
+    font-weight: 400;
+    font-size: .8em;
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--primary-dark);
+}
+
+.card-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    background-color: var(--primary-dark);
+    padding: 30px 0;
+    margin: auto;
+    text-align: center;
+}
+
+footer ul {
+    margin: 20px 0;
+    display: flex;
+    padding: 0;
+}
+
+footer ul li {
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+
+footer ul li img {
+    width: 15px;
+}
+
+.logo {
+    width: 100px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+footer .btn {
+    padding: 10px 30px;
+}
+
+
+/************large devices only *****/
+
+@media (min-width: 1200px) {}
+
+
+/********** Medium devices only ****/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* p {
+        color: coral !important;
+    } */
+    /*description*/
+    .phone img {
+        width: 615px;
+        top: -75px;
+        right: -121px;
+    }
+    .image img.background {
+        width: 795px;
+        height: 790px;
+        top: -150px;
+        right: -211px;
+    }
+    /**article**/
+    .card-title {
+        font-size: 1.2em;
+    }
+    .card-text {
+        font-size: 15px;
+    }
+}
+
+
+/******Small divices only ******/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* p {
+        color: darkgreen !important;
+    } */
+    /*description*/
+    .description {
+        height: 470px;
+    }
+    .phone img {
+        width: 486px;
+        height: 605px;
+        top: -45px;
+        right: -91px;
+    }
+    .image img.background {
+        width: 700px;
+        height: 679px;
+        top: -150px;
+        right: -230px;
+    }
+    .info {
+        width: 300px;
+    }
+    .card {
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+}
+
+
+/****** Extra small devices only *****/
+
+@media (max-width: 767px) {
+    /* p {
+        color: fuchsia !important;
+    } */
+    .description-small {
+        background-color: var(--neutral-gray);
+        width: 100%;
+        /* position: relative; */
+        padding-bottom: 50px;
+    }
+    .image-small {
+        background: url("../images/bg-intro-mobile.svg") no-repeat center center / cover;
+        height: 400px;
+        margin-bottom: 40px;
+    }
+    .phone-small {
+        width: 80%;
+        height: 500px;
+        margin-top: -150px;
+        margin-left: 10%;
+        margin-right: 10%;
+        /* position: absolute;
+        top: -100px;
+        left: auto; */
+    }
+    .info-small {
+        text-align: center;
+    }
+    button.btn {
+        padding: 8px 34px;
+    }
+    /****choose us****/
+    #chooseUs {
+        text-align: center;
+        margin: auto;
+    }
+    /***article***/
+    #article h2 {
+        text-align: center;
+        margin: auto;
+    }
+    .card {
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .card-img-top {
+        height: 300px;
+    }
+}
