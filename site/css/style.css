@@ -30,6 +30,26 @@ p {
 }
 
 
+/***alert***/
+
+.alert {
+    z-index: 100;
+    margin: 0;
+    background-color: hsl(218, 28%, 13%);
+    text-align: center;
+    color: white;
+    border-radius: 0;
+}
+
+.alert a {
+    color: #969da5;
+    font-weight: bold;
+}
+
+
+/*****end alert***/
+
+
 /******************head*********************/
 
 #head {
