@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,12 +17,12 @@
     --white: hsl(0, 0%, 100%);
     --weig-ini: 400;
     --weig-bold: 600;
-    --font-body: Arial, Helvetica, sans-serif;
-    --font-head: Arial, Helvetica, sans-serif;
+    --font-body:  'Open Sans', sans-serif;
+    --font-head: 'Raleway', sans-serif;
 }
 
 body {
-    background: var(--pri-main-bg);
+    background: var(--pri-nav);
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
@@ -53,7 +55,6 @@ p {
 /******************head*********************/
 
 #head {
-    background-color: var(--pri-nav);
     z-index: 1;
 }
 
@@ -67,7 +68,7 @@ nav a img {
     width: 150px;
 }
 
-ul.navbarnav {
+ul.nav {
     display: flex;
     flex-direction: row;
 }
@@ -106,16 +107,6 @@ li.navlink:hover {
     padding-bottom: 1rem;
 }
 
-#head .content .info p {
-    font-size: 14px;
-}
-
-button {
-    background: linear-gradient(to right, var(--gra-cyan), var(--gra-blue));
-    padding: .5rem 3rem;
-    border-radius: 30px;
-}
-
 #head button {
     background: linear-gradient(to right, var(--gra-cyan), var(--gra-blue));
     padding: .5rem 3rem;
@@ -134,14 +125,18 @@ button {
 
 #bg-image {
     height: auto;
-    z-index: 5;
-    position: absolute;
+    z-index: -5;
+    position: relative;
+    top : 0;
 }
-
+#bg-image img{
+    width: 100%;
+}
 
 /***************offre*******************/
 
 #offre {
+    background:var(--pri-main-bg) ;
     height: auto;
     margin: auto;
     padding: 2rem 0;
@@ -281,6 +276,10 @@ button {
     border-radius: 30px;
     padding: 6px 30px;
     width: 100%;
+    background: linear-gradient(to right, var(--gra-cyan), var(--gra-blue));
+    padding: .5rem 3rem;
+    border-radius: 30px;
+    box-shadow: none;
 }
 
 #get-started button:hover {
@@ -379,7 +378,9 @@ footer .icon-social:hover {
 
 /********** Medium devices only ****/
 
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+}
 
 
 /******Small divices only ******/
@@ -395,11 +396,8 @@ footer .icon-social:hover {
         font-weight: 400;
         font-size: 15px;
     }
-    /********content-header**********/
-    /* #head .content {
-        /* margin-right: 2rem;
-        margin-left: 2rem; 
-    } */
+    /********bg**********/
+    
     /*********offre************/
     #offre .item p {
         width: auto;
@@ -416,10 +414,7 @@ footer .icon-social:hover {
     #productive .content {
         margin-top: 2rem;
     }
-    /*********offer*********/
-    #offre {
-        margin: 20px 2rem;
-    }
+    
     /***footer******/
     .more {
         display: flex;
@@ -465,9 +460,9 @@ footer .icon-social:hover {
     #head .content img {
         width: 80%;
     }
-    #offre .item p {
-        width: auto;
-    }
+    /*****bg*********/
+    
+    
     /*********** Get started ***********/
     #get-started {
         width: 90%;
@@ -478,8 +473,8 @@ footer .icon-social:hover {
         margin-top: 1rem;
     }
     /*********offer*********/
-    #offre {
-        margin: 20px 2rem;
+    #offre .item p {
+        width: auto;
     }
     /**********productive**********/
     #productive {
